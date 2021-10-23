@@ -1,0 +1,19 @@
+Syntax:
+disguise class team | Disguises the user as the specified player. Client-sided
+
+Classes:
+1: Scout
+2: Sniper
+3: Soldier
+4: Demoman
+5: Medic
+6: Heavy
+7: Pyro
+8: Spy
+9: Engineer
+
+Teams:
+1: BLU
+2: RED
+-1: Opposite team
+-2: Same team

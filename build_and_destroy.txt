@@ -1,0 +1,12 @@
+Note: the syntax is the same for build and for destroy
+Syntax: command build_id variant | Will build or destroy the specified building. Inputting a variant is required to use the new version of these commands
+
+Buildings:
+Engineer:
+0: Dispenser
+1: Teleporter (variants: 0: entrance, 1: exit)
+2: Sentry
+
+Spy:
+3: Sapper
+Note: destroy doesn't work on sappers

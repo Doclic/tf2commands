@@ -1,0 +1,6 @@
+Auto balance is a feature that prevents a team from having more players than another.
+All commands are server-side.
+
+Convars:
+mp_autoteambalance | Is auto balance enabled (default: 0, needs checking)
+mp_teams_unbalance_limit | How much should the count differ between 2 teams for the server to consider it unbalanced (default: 1)

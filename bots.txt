@@ -1,0 +1,14 @@
+Bots are fake players that are used to replace actual players.
+TF Bots are more advanced Bots.
+These commands or convars are all server-side.
+
+TF Bots:
+Commands:
+tf_bot_add name_or_amount | Adds TF Bots
+tf_bot_kick all | Kicks all TF Bots
+tf_bot_kick name | Kicks a TF Bot
+
+Convars:
+tf_bot_flag_kill_on_touch | If a bot picks up an intel when this convar is 1, it will die (default: 0)
+tf_bot_quota | The number of bots in the server, but every player online will remove 1 to this count (not the convar, the amount of bots. default: 0)
+tf_bot_count | Read only. The amount of bots in the server

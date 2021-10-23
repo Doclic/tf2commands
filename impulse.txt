@@ -1,0 +1,14 @@
+Syntax: impulse action | Client-side cheat. Does a certain action
+
+Actions:
+101: Refills weapons and health
+102: Spawns a skull
+106: "Identifies model being aimed at" | I couldn't get this to work
+107: "Identifies texture being aimed at" | I couldn't get this to work
+200: Removes your weapon in third person
+201: Spray
+202: Plays the sound set in cl_soundfile to players with cl_customsounds set to 1
+203: Removes the object you're aiming at without printing anything to the console
+221-239: Disguises a Spy (221-229 are for RED, and 231-239 are for BLU; 230 doesn't do anything); the last digit is the class (the same number used in the disguise command)
+
+Everything else doesn't do anything

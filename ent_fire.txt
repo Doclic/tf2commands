@@ -1,0 +1,7 @@
+ent_fire action... | Don't know about side nor if it's a cheat, should do a specific action
+
+ent_fire team_round_timer addtime <seconds>: Should add time to the round timer, negative seconds works; couldn't get this to work
+ent_fire team_round_timer pause/resume: Should pause or resume the round timer; couldn't get this to work
+ent_fire team_round_timer disable/enable: Should pause or resume the round timer but also remove it from the HUD; couldn't get this to work
+ent_fire !picker setbuilder !self: Sets the builder (owner) of an unnamed building to the player; couldn't test this as I have no friends
+ent_fire player SpeakResponseConcept HalloweenLongFall: Makes everyone on the server scream; couldn't get this to work but it might be because you can't hear yourself screaming

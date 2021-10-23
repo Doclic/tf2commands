@@ -1,0 +1,87 @@
+Commands:
+Both sides:
+"convar" "value" | Sets the value of a convar, example: sv_cheats 1
+incrementvar "convar" min max added | Adds added to a convar. If the result is out of bounds, then it will wrap around
+alias | Lists the current aliases
+alias "name" "command" | Creates an alias for a command. Example: alias "test" "say test" will make it so that when you use the test command, it will send "test" in chat
+wait ticks | Only works in .cfg files. Waits for a certain amount of ticks before executing the next command
+exec "file_name" | Executes a .cfg file. The .cfg suffix is not required
+toggle "convar_name" values | Toggles a convar between multiple values, example: "toggle sv_cheats 1 0" will toggle cheats
+echo "text" | Prints something to the console
+toggleconsole | Toggles the console on the client-side but crashes a dedicated server
+exit | Stops a dedicated server or client
+
+mp_forcerespawnplayers | Respawns everyone, even if they're alive
+tf_mvm_jump_to_wave wave | Cheat. Jumps to an MvM wave
+
+Client-side:
+bind "key" | Tells you what command is binded to that key
+bind "key" "command" | Binds a command to a key. To bind multiple commands, separate them with a semi-colon
+bindtoggle "key" toggle | Same as toggle but binds it
+noclip | Toggles noclip, requires cheats
+god | Toggles god mode, requires cheats
+eureka_teleport location | If the player is holding the Eurake Effect, then they will be teleported to 0: their spawn 1: their teleporter exit
+lastdisguise | Makes a spy re-disguise. If the spy is already disguised, then they will hold the weapon (default bind: B)
+load_itempreset loadout_id | Sets the player's loadout. ID: 0: A 1: B 2: C 3: D
+say message | Sends a public chat message
+say_team message | Sends a team chat message
+say_party message | Sends a party chat message
+thirdperson | Cheat. Forces you to TPS view
+thirdperson_mayamode | Locks your camera in TPS view
+firstperson | Sets you to FPS view. Sometimes doesn't work like when you're taunting. Not a cheat so this means you can sometimes go back to FPS view when you're supposed to be in TPS
++taunt | Opens the taunt menu
++use_action_slot_item | Uses the item in the action slot of the user's loadout
+taunt_by_name | Prints all the taunt names in the player's loadout
+taunt_by_name name | Plays a taunt by name if it's in the player's loadout. Example: taunt_by_name Taunt: The Director's Vision
+currency_give money | Gives you MvM money, it's capped from 0 to 30000 and you can give yourself negative amounts of money
+ent_create entity | Creates an entity where you're looking. See example of entities in entities.txt
+ent_remove | Removes the entity you're looking at, removing a player is very buggy. Use impulse 203 if you don't want it to send a log
+ent_remove_all entity | Removes all entities of the specified type, also exists on servers but doesn't seem to work
+shake | Shakes the screen, probably used when a payload cart explodes
+retry | Reconnects to a server
+clear | Clears the console
+
+Server-side:
+mp_forcewin team_id | Makes a team win. ID: 2: RED, 3: BLU
+mp_scrambleteams | Forces a team scramble
+kick player | Kicks a Bot, TF Bot, or player
+restart | Restarts the dedicated server, also exists on clients but doesn't do anything
+
+
+Convars:
+Client-side:
+fov_desired | The FOV, won't change the FPS weapon (default: 75)
+viewmodel_fov | The FPS weapon FOV (default: 54)
+r_drawviewmodel | Show or hide the FPS weapon
+volume | The in-game volume ranging from 0 to 1 (decimal)
+cl_pitchup and cl_pitchdown | Pitch range, should be set to the same value (default: 89, cheat)
+r_drawmodelstatsoverlay | Show the name of the model under the crosshair (default: 0, cheat)
+
+Server-side:
+sv_cheats | Are cheats enabled? Default: 0
+sv_tags | The server tags, modified by some commands (such as "nocrits" being if tf_weapon_criticals is set to 0)
+sv_pure | How much modding is allowed, -1: Allow all modding, 0: Allow all modding but materials (default maybe), 1: Uses sv_pure.cfg, 2: Uses sv_pure_strict.cfg
+tf_damage_disablespread | Is random damage spread disabled (default: 0)
+tf_use_fixed_weaponspreads | Is random bullet spread fixed (default: 0)
+tf_weapon_criticals | Disabling random crits for primaries, secondaries, and melees if tf_weapon_criticals_melee is 0 or 1 (default: 0)
+tf_weapon_criticals_melee | 0: Random crits disabled for melees, 1: disabled only if tf_weapon_criticals is set to 0 (default) 2: enabled not matter what
+sv_gravity gravity | Server gravity (default: 800)
+mp_timelimit | Limit before map change (default: 30, needs checking)
+tf_avoidteammates_pushaway | When set to 1, players won't be able to bump teammates (default: 0)
+host_timescale | The timescale (decimal), default: 1
+tf_disable_respawn_times | Are respawn times disabled (default: 0)
+mp_highlander | When set to 1, highlander mode will be enabled (meaning 9 max players per team, 1 player per class)
+mp_waitingforplayers_cancel | When set to 1, it will cancel the "Waiting for players..." screen, then set itself backs to 0
+tf_flag_caps_per_round | Playing to in CTF (default: 3)
+tf_ctf_bonus_time <seconds> | Sets how long players get crits after a CTF capture
+tf_damage_multiplier_blue | The damage multiplier (decimal) for BLU (default: 1)
+tf_damage_multiplier_red | The damage multiplier (decimal) for RED (default: 1)
+mp_friendlyfire | When set to 1, players will be able to hit their teammates. This is very buggy though. (Example: backstabs don't work on teammates)
+mp_idledealmethod | How the server deals with afk players. 0: doesn't do anything, 1: sends to spec, then kicks, 2: kicks (default: 1)
+tf_medieval | Force medieval mode (default depends on the map, but it should be obvious)
+tf_medievial_autorp | Force medieval mode chat (default depends on the map, but it should be obvious)
+tf_allow_taunt_switch | Set to 2 to allow switching during a taunt, 1 doesn't seem to do anything (default: 0)
+tf_playergib | 0: no gibs, 1: gibs only on explosion deaths, 2: gibs on every death (default: 1)
+mp_restartgame | The time in seconds before the game restarts (default: 0, changed by server)
+tf_always_loser | If set to 1, every player with be in a loser animation but they will still be able to hit (default: 0)
+tf_overtime_nag | If set to 1, the announcher will continously shoot "OVERTIME!" while in overtime (default: 0)

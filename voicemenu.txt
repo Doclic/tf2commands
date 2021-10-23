@@ -1,0 +1,29 @@
+Syntax: voicemenu menu message | Plays a voiceline\
+
+Voicelines:
+0 0: MEDIC!
+0 1: Thanks!
+0 2: Go! Go! Go!
+0 3: Move Up!
+0 4: Go Left
+0 5: Go Right
+0 6: Yes
+0 7: No
+0 8: Pass To Me!
+1 0: Incoming
+1 1: Spy!
+1 2: Sentry Ahead!
+1 3: Teleporter Here
+1 4: Dispenser Here
+1 5: Sentry Here
+1 6: Activate Charge!
+1 7: MEDIC: ÜberCharge Ready
+1 8: Pass To Me!
+2 0: Help!
+2 1: Battle Cry
+2 2: Cheers
+2 3: Jeers
+2 4: Positive
+2 5: Negative
+2 6: Nice Shot
+2 7: Good Job

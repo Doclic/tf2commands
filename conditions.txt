@@ -1,0 +1,98 @@
+addcond id | Client-side cheat command, gives you a condition
+addcond id seconds | Client-side cheat command, gives you a condition for a certain period
+removecond id | Client-side cheat command, removes a condition from you
+
+Interesting conditions:
+0: Slows down the player when they switch weapons, and sets heavies holding their primary to their revved pose, snipers to their zooming pose, and every other class except Soldier to an A pose (Soldiers keep their normal animations). Pyros only A pose while moving
+1: Sniper Rifle scope
+4: Cloak // Doesn't play a sound, if applied to non-spy class, the player will immediately silently uncloak
+7: Taunt // Doesn't do anything using addcond, but cancels a taunt when using removecond
+10: Teleporting // Prevents you from doing things that you can't while tp-ing (E.G.: Picking up the intel in CTF)
+13: Dead Ringer Cloak // Same as 4 but using Dead Ringer (4 wouldn't give damage reduction)
+14: Bonk! Atomic Punch effect
+15: Stun // Doesn't stun the player when using addcond, but unstuns when using removecond
+19: Crit-a-Cola effect
+20: Rings // Adds rings around the player's feet; like the Medicating Melody effect
+21: Continuous healing // Can't be added by using addcond, but removes any healing when using removecond
+22: Afterburn // The fire will immediatly be removed when using addcond
+24: Jarate effect
+25: Bleeding // addcond won't make the player bleed
+26: Battalion's Backup effect
+27: Mad Milk effect
+28: Quick-Fix visual effects + knock back/movement immunity (no healing). Will drop as soon as the user starts to receive continuous healing from a Dispenser, Payload cart or Medic's secondary healing gun. Also drops from a Medic as soon as he activates or comes to the end of his own ÜberCharge. Not affected by a Medic's self-healing.
+29: Concheror effect
+30: Marked for death // Fan o' War effect
+31: Mini-crits // No mini-crit glow; player cannot be healed
+32: Disciplinary Action effect
+33: Halloween pumpkin crit boost
+34: Canteen crit boost // Provides crits and doubles sentries firing speed
+35: Crit glows // Doesn't actually provide crits
+36: Hype effect? // Only gives purple weapon glow to non-Scout classes
+37: First blood crit boost
+41: Only melee // The effect only works if the player is holding a melee weapon, otherwise will wait for player to switch to melee
+42: Battalion's Backup effect without indication on HUD
+45: Mmmph (from phlog) activation defense buff
+46: Hitman's Heatmaker effect for sniper primaries // The Classic, The Huntsman or their reskins don't get the effect
+47: Enforcer's disguise wearoff effect // Makes the spy lose the 20% damage bonus
+48: Self marked for death (Rescue Ranger hauling)
+49: Disguising as an enemy dispener? // The player only shows up as a dispenser when crouching; their speed is limited to 450 HU/s; swapping weapons will set the player's speed to 0; hitting/shooting won't remove the effect
+50: MvM Robot sap effect
+53: Adding: player gets a bomb on their head and are forced to TPS Removing: if the player has a bomb, it will explode and force the player to FPS
+54: Prevents the player from moving, taunting and shooting. Also plays Ghost Fort dance music
+56: Crit effect // Likely used for the Wheel of Fate
+57: ÜberCharge // Likely used for the Wheel of Fate
+58: Vaccinator Über bullet resistance
+59: Vaccinator Über blast resistance
+60: Vaccinator Über fire resistance
+61: Vaccinator passive bullet resistance
+62: Vaccinator passive blast resistance
+63: Vaccinator passive fire resistance
+64: Cloak effect for every class, will uncloak on hit // Used for the Invisibility Magic spell; doesn't consume cloak for spies
+66: Player is ignored by enemy bots and sentries, fades to invisibility (like most cloaks). Attack will make the player blink to visibility again // Used when the Invisibility Magic spell is fading
+67: Bullet damage immunity
+68: Blast damage immunity
+69: Fire damage immunity
+70: When a player should die, their health will only be set to 1 and this cond will get removed
+72: Gives the player faster speed, firing, reloading and infinite jumps // Used for the Minify Magic spell
+73: Quick-Fix like effect; adds cond 21 for the entire effect duration and 28 for a small timeframe // Used for the Healing Aura Magic spell
+74: The player's size is doubled, cannot lose ammos and their health and max health are set to current max * 10. The player is also forced to MTPS (Medieval TPS)
+75: The player's size is halved (except for their head), is forced to TPS // Used for the Bumper Cars in Carnival of Carnage and Gravestone
+76: Cond 77 is added to the player upon death // Used for when a player is in Hell
+77: Ghost effect
+79: Nullifies damage dealt to the player 3/4 times // Nullified hits show the MISS! icon from cond 14
+80: Parachute // Only works when airborn
+81: Air Strike's firing speed is higher
+82: Bumper Car without HUD
+83: The player's FOV is increased, and if they have cond 82, the player will be forced forwards at high speed until collision with a wall or enemy player // Added automatically by pressing SECONDARY FIRE when cond 82 is activev
+84: The player's brain becomes bigger, lowering gravity in the process
+85: Melee weapons only, adds conds 32 and 75
+86: Swimming // If added while not being in the water, player will be able to swim anyway; if removed while in water, nothing will happen
+87: Disables movement, rotation, attack, and weapon switches
+88: NOTE: THIS USUALLY CRASHES THE PLAYER'S GAME, WHEN IT DOESN'T, a cage surrounding the player gets created and cond 87 is added // This is used for Scream Fortress Halloween bumper car minigames, currently only works on Carnival of Carnage
+90: Double damage, and no distance damage fall-off // Used for the "Strength" powerup in Mannpower
+91: Double firing speed, reload speed, clip size, and max ammo count. Movement speed 30% higher // Used for the "Haste" powerup in Mannpower
+92: The player receives constant ammo, health, and metal. Health regen is inversely proportional to max health // Used for the "Regen" powerup in Mannpower
+93: 50% resistance to every damage, immunity to crits // Used for the "Resitance" powerup in Mannpower
+94: The player gains health base on damage dealt, 25% damage resitance, and 40% max health increase // Used for the "Vampire" powerup in Mannpower
+95: Damage is reflected to the enemy but cannot cause death, The player gets a 50% max health increase // Used for the "Reflect" powerup in Mannpower
+96: Bullet spread decreased, damage falloff immunity, 2.5x faster projectiles, sniper rifles get double damage, faster damage ramp-up, and faster re-zoom after fire // Used for the "Precision" powerup in Mannpower
+97: Faster movement speed, grapple speed, and jump height. Instant weapon switch // Used for the "Agility" powerup in Mannpower
+101: Adds a Grappling Hook icon in the HUD // Added when the player is latched by another player
+102: Afterburn immunity // Added when the player cloaks using the Dead Ringer
+103: The player can only use their melee weapon and their Grappling Hook, gets +150 max health, immunity to knockback, 4x damage to Buildings // Used for the "Knockout" powerup in Mannpower
+104: Prevents pickup of the Mannpower Crit or Uber powers // Added wwhen the player gets the Revenge Mannpower powerup
+106: Distortion effect // Added when the player intercepts the Jack in PASS Time
+107: Cond 86, but without the animations, the forced TPS, and the underwater distortion effect
+108: Refills health, gives 1 second of ÜberCharge when added and says "<player> has escapted the underworld!" in the text chat, and gives the effect of escaping the underworld when removed // Used for Eyeaduct when a player enters the Underworld
+109: Increases max health, health regen, fire speed, and reload speed // Used for the "King" powerup in Mannpower
+110: The Plague powerup from Mannpower
+111: The Supernova powerup from Mannpower
+112: The player bleeds indefinately, and loses the health regen and team buff from the "King" Mannpower powerup // Added when plagued by the "Plague" Mannpower powerup
+113: Team buffs from the "King" Mannpower powerup; faster health regen, fire speed, and reload speed
+114: Wallhack used on respawn
+118: Healing debuff // Added by Pyro's Flamethrower
+120: No taunting // Used when a player's Grappling Hook is grappled to another player
+123: Gas Passer effect
+126: Decreased friction, removed when the player stops moving
+127: Increased air control // Used when the player gets affected by an air current such as Pyro's air blast
+129: Reduced strength of currently equipped Mannpoer powerup // Used in Mannpower when a player has a high kill count compared to other players in the game

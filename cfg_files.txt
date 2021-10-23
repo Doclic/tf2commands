@@ -1,0 +1,8 @@
+.cfg files are files found in server_or_client/tf/cfg/ they can be ran using the exec command but some are ran automatically
+If a line starts with "//", then it won't be run
+Otherwise, it will be run as a console command
+
+autoexec.cfg | Ran when the server or client starts
+server.cfg | Ran when the server starts
+"map".cfg | Ran when the map is loaded. Example: ctf_2fort.cfg
+"class".cfg | Ran when the user switches to the specified class. Example: spy.cfg

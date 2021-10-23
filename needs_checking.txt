@@ -1,0 +1,3 @@
+mp_autoteambalance | File: autobalance.txt, server convar, unsure of default
+mp_timelimit | File: misc.txt, server convar, unsure of default
+sv_pure | File: misc.txt, server convar, unsure of default

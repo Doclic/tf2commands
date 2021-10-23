@@ -1,0 +1,15 @@
+tf_forced_holiday | Server-side convar, current holiday
+
+Holidays:
+0: None
+1: Birthday
+2: Halloween
+3: Christmas
+4: Community Update
+5: EOTL
+6: Valentines
+7: Meet The Pyro
+8: Full Moon
+9: Halloween / Full Moon
+10: Halloween / Full Moon / Valentines, Unused
+11: April Fools

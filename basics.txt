@@ -1,0 +1,15 @@
+Console commands can be sent in 2 ways:
+Client-side: Using the console on your client. You cannot use it by default. To enable it, in keyboard options click advanced and enable the developer console. Default key is ` (~). If a command is client-sided, that doesn't mean it won't do anything on the server
+Server-side: Using the console from your dedicated server. You can only use it using rcon
+
+The "toggleconsole" can be binded to add another key to open the console
+
+
+Useful links:
+http://developer.valvesoftware.com/wiki/Main_Page
+http://developer.valvesoftware.com/wiki/List_of_Team_Fortress_2_Entities
+https://wiki.teamfortress.com/wiki/Cheats
+https://wiki.teamfortress.com/wiki/List_of_useful_console_commands
+https://developer.valvesoftware.com/wiki/List_of_TF2_console_commands_and_variables
+https://steamcommunity.com/app/440
+https://wiki.teamfortress.com/wiki/Scripting
