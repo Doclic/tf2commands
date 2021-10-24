@@ -69,7 +69,7 @@ sv_gravity gravity | Server gravity (default: 800)
 mp_timelimit | Limit before map change (default: 30, needs checking)
 tf_avoidteammates_pushaway | When set to 1, players won't be able to bump teammates (default: 0)
 host_timescale | The timescale (decimal), default: 1
-tf_disable_respawn_times | Are respawn times disabled (default: 0)
+mp_disable_respawn_times | Are respawn times disabled (default: 0)
 mp_highlander | When set to 1, highlander mode will be enabled (meaning 9 max players per team, 1 player per class)
 mp_waitingforplayers_cancel | When set to 1, it will cancel the "Waiting for players..." screen, then set itself backs to 0
 tf_flag_caps_per_round | Playing to in CTF (default: 3)
