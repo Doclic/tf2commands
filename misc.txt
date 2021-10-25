@@ -45,6 +45,7 @@ Server-side:
 mp_forcewin team_id | Makes a team win. ID: 2: RED, 3: BLU
 mp_scrambleteams | Forces a team scramble
 kick player | Kicks a Bot, TF Bot, or player
+showtriggers_toggle | Cheat. Makes every client see the trigger material. Useful for mapping
 restart | Restarts the dedicated server, also exists on clients but doesn't do anything
 
 
