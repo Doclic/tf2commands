@@ -12,7 +12,7 @@ toggleconsole | Toggles the console on the client-side but crashes a dedicated s
 exit | Stops a dedicated server or client
 
 mp_forcerespawnplayers | Respawns everyone, even if they're alive
-tf__jump_to_wave wave | Cheat. Jumps to an MvM wave
+tf_mvm_jump_to_wave wave | Cheat. Jumps to an MvM wave
 
 Client-side:
 bind "key" | Tells you what command is binded to that key
