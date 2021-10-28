@@ -12,20 +12,24 @@ toggleconsole | Toggles the console on the client-side but crashes a dedicated s
 exit | Stops a dedicated server or client
 
 mp_forcerespawnplayers | Respawns everyone, even if they're alive
-tf_mvm_jump_to_wave wave | Cheat. Jumps to an MvM wave
+tf__jump_to_wave wave | Cheat. Jumps to an MvM wave
 
 Client-side:
 bind "key" | Tells you what command is binded to that key
 bind "key" "command" | Binds a command to a key. To bind multiple commands, separate them with a semi-colon
 bindtoggle "key" toggle | Same as toggle but binds it
-noclip | Toggles noclip, requires cheats
-god | Toggles god mode, requires cheats
-eureka_teleport location | If the player is holding the Eurake Effect, then they will be teleported to 0: their spawn 1: their teleporter exit
+noclip | Cheat. Toggles noclip (noclip is the ability to fly and go through walls)
+god | Cheat. Toggles god mode (when in god mode, you shouldn't take damage but for some reason, this doesn't work in TF2)
+hurtme damage | Cheat. Damages you by the specified amount, negative amounts will give you health and can overheal you
+eureka_teleport location | If the player is holding the Euraka Effect, then they will be teleported to 0: their spawn 1: their teleporter exit
 lastdisguise | Makes a spy re-disguise. If the spy is already disguised, then they will hold the weapon (default bind: B)
 load_itempreset loadout_id | Sets the player's loadout. ID: 0: A 1: B 2: C 3: D
-say message | Sends a public chat message
+say message | Sends a public chat message. Bypasses the medieval roleplay
 say_team message | Sends a team chat message
 say_party message | Sends a party chat message
+callvote | Opens the voting menu
+vote option | Chooses an option for voting, example: "vote option1" will vote for yes or the first map
+show_quest_log | Opens the Contracker
 thirdperson | Cheat. Forces you to TPS view
 thirdperson_mayamode | Locks your camera in TPS view
 firstperson | Sets you to FPS view. Sometimes doesn't work like when you're taunting. Not a cheat so this means you can sometimes go back to FPS view when you're supposed to be in TPS
@@ -33,7 +37,8 @@ firstperson | Sets you to FPS view. Sometimes doesn't work like when you're taun
 +use_action_slot_item | Uses the item in the action slot of the user's loadout
 taunt_by_name | Prints all the taunt names in the player's loadout
 taunt_by_name name | Plays a taunt by name if it's in the player's loadout. Example: taunt_by_name Taunt: The Director's Vision
-currency_give money | Gives you MvM money, it's capped from 0 to 30000 and you can give yourself negative amounts of money
+player_ready_toggle | Toggles readyness in MvM
+currency_give money | Cheat. Gives you MvM money, it's capped from 0 to 30000 and you can give yourself negative amounts of money
 ent_create entity | Creates an entity where you're looking. See example of entities in entities.txt
 ent_remove | Removes the entity you're looking at, removing a player is very buggy. Use impulse 203 if you don't want it to send a log
 ent_remove_all entity | Removes all entities of the specified type, also exists on servers but doesn't seem to work
@@ -59,13 +64,50 @@ cl_pitchup and cl_pitchdown | Pitch range, should be set to the same value (defa
 r_drawmodelstatsoverlay | Show the name of the model under the crosshair (default: 0, cheat)
 
 Server-side:
-sv_cheats | Are cheats enabled? Default: 0
+sv_cheats | Are cheats enabled? (Default: 0)
 sv_tags | The server tags, modified by some commands (such as "nocrits" being if tf_weapon_criticals is set to 0)
 sv_pure | How much modding is allowed, -1: Allow all modding, 0: Allow all modding but materials (default maybe), 1: Uses sv_pure.cfg, 2: Uses sv_pure_strict.cfg
+sv_allow_votes | Is voting allowed? (Default: 1)
+sv_vote_allow_spectators | Allow spectators to create and participe in votes (Default: 0)
+sv_vote_creation_timer | Cooldown (in seconds) between each vote a player can make (Default: 150 = 2 mins, 30 secs)
+sv_vote_failure_timer | Cooldown (in seconds) before a vote can be resubmitted (Default: 300 = 5 mins)
+sv_vote_failure_timer_mvm | Cooldown (in seconds) before a vote can be resubmitted in MvM (Default: 120 = 2 mins)
+sv_vote_holder_may_vote_no | Can the vote creator vote no (Default: 0)
+sv_vote_issue_autobalance_allowed | Can a vote for toggling auto balance be created (Default: 0)
+sv_vote_issue_autobalance_cooldown | Cooldown (in seconds) between each successful auto balance vote (Default: 300 = 5 mins)
+sv_vote_issue_changelevel_allowed | Allows players to vote to change map immediately (Default: 1)
+sv_vote_issue_classlimits_allowed | Allows players to vote to toggle class limits (Default: 0)
+sv_vote_issue_classlimits_max | The value tf_classlimit is set to after a successful vote for enabling class limits (Default: 4)
+sv_vote_issue_classlimits_cooldown | Cooldown (in seconds) between each successful auto class limits (Default: 300 = 5 mins)
+sv_vote_issue_classlimits_allowed_mvm | Allows players to vote to toggle class limits in MvM (Default: 0)
+sv_vote_issue_classlimits_max_mvm | The value tf_classlimit is set to after a successful vote for enabling class limits in MvM (Default: 2)
+sv_vote_issue_extendlevel_allowed | Allows players to vote to extend this map instead of going to the next (Default: 1)
+sv_vote_issue_extendlevel_quorum | Percentage (in demical; so 100% is 1, 50% is 0.5, 0% is 0, etc...) of the amount of people required to extend the map (Default: 0.6 = 60%)
+sv_vote_issue_kick_allowed | Can players vote to kick players (Default: 0)
+sv_vote_issue_kick_namelock_duration | How long (in seconds) do a vote kicked player have to wait before changing their name (Default: 120 = 2 mins)
+sv_vote_kick_ban_duration | How long (in minutes) should a player be banned for after getting vote kicked (Default: 20)
+sv_vote_issue_kick_limit_mvm | "The maximum number of kick votes a player can call during an MvM mission started by matchmaking. (0 = disabled)" (Default: 0)
+sv_vote_issue_kick_min_connect_time_mvm | The amount (in seconds) of time before a player can be kicked in MvM (Default: 300)
+sv_vote_issue_kick_spectators_mvm | Allows players to kick spectators in MvM (Default: 1)
+sv_vote_issue_nextlevel_allowed | Can players vote to change the map at the end of the round (Default: 1)
+sv_vote_issue_nextlevel_prevent_change | Prevents player from changing the next map multiple times (Default: 1)
+sv_vote_issue_pause_game_allowed | Can players vote to pause the game (Default: 1)
+sv_vote_issue_pause_game_cooldown | Cooldown (in seconds) between each successful pause game vote (Default: 1200 = 20 mins)
+sv_vote_issue_pause_game_timer | Time (in seconds) the game is paused for after a successful pause game vote (Default: 120 = 2 minutes)
+sv_vote_issue_restart_game_allowed | Can players vote to restart the game (Default: 0)
+sv_vote_issue_restart_game_cooldown | Cooldown (in seconds) between each successful pause game vote (Default: 300 = 5 mins)
+sv_vote_issue_restart_game_allowed_mvm | Can players vote to restart the game in MvM (Default: 1)
+sv_vote_issue_scramble_teams_allowed | Can players vote to scramble the teams, if yes, a successful vote will start a 5 seconds cooldown before scrambling (Default: 1)
+sv_vote_issue_scramble_teams_cooldown | Cooldown (in seconds) between each successful scramble the teams vote (Default: 1200 = 20 mins)
+sv_vote_late_join_cooldown | Cooldown (in seconds) applied to players joining a match in progress preventing them from creating vote kicks (Default: 300 = 5 mins)
+sv_vote_late_join_time | Grace period (in seconds) before the cooldown from sv_vote_late_join_cooldown is applied to players
+sv_vote_quorum_ratio | Percentage (in demical; so 100% is 1, 50% is 0.5, 0% is 0, etc...) of Yes votes required for a vote to be successful (Default: 0.6 = 60%)
+sv_vote_ui_hide_disabled_issues | Hides disabled issues in the vote creation menu (Default: 1)
 tf_damage_disablespread | Is random damage spread disabled (default: 0)
 tf_use_fixed_weaponspreads | Is random bullet spread fixed (default: 0)
 tf_weapon_criticals | Disabling random crits for primaries, secondaries, and melees if tf_weapon_criticals_melee is 0 or 1 (default: 0)
 tf_weapon_criticals_melee | 0: Random crits disabled for melees, 1: disabled only if tf_weapon_criticals is set to 0 (default) 2: enabled not matter what
+tf_classlimit | The max amount of players per class in each team
 sv_gravity gravity | Server gravity (default: 800)
 mp_timelimit | Limit before map change (default: 30, needs checking)
 tf_avoidteammates_pushaway | When set to 1, players won't be able to bump teammates (default: 0)
@@ -79,8 +121,8 @@ tf_damage_multiplier_blue | The damage multiplier (decimal) for BLU (default: 1)
 tf_damage_multiplier_red | The damage multiplier (decimal) for RED (default: 1)
 mp_friendlyfire | When set to 1, players will be able to hit their teammates. This is very buggy though. (Example: backstabs don't work on teammates)
 mp_idledealmethod | How the server deals with afk players. 0: doesn't do anything, 1: sends to spec, then kicks, 2: kicks (default: 1)
-tf_medieval | Force medieval mode (default depends on the map, but it should be obvious)
-tf_medievial_autorp | Force medieval mode chat (default depends on the map, but it should be obvious)
+tf_medieval | Force medieval mode (default: 0, even on cp_degrootkeep)
+tf_medievial_autorp | Force medieval mode chat (default: 0 on normal maps, 1 on medieval maps)
 tf_allow_taunt_switch | Set to 2 to allow switching during a taunt, 1 doesn't seem to do anything (default: 0)
 tf_playergib | 0: no gibs, 1: gibs only on explosion deaths, 2: gibs on every death (default: 1)
 mp_restartgame | The time in seconds before the game restarts (default: 0, changed by server)
