@@ -59,6 +59,7 @@ Client-side:
 fov_desired | The FOV, won't change the FPS weapon (default: 75)
 viewmodel_fov | The FPS weapon FOV (default: 54)
 r_drawviewmodel | Show or hide the FPS weapon
+r_drawclipbrushes | Cheat. Draws the clip and player clip brushes. 0: Don't draw (Default), 1: Draw borders, 2: Draw fully
 volume | The in-game volume ranging from 0 to 1 (decimal)
 cl_pitchup and cl_pitchdown | Pitch range, should be set to the same value (default: 89, cheat)
 r_drawmodelstatsoverlay | Show the name of the model under the crosshair (default: 0, cheat)
