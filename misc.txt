@@ -64,6 +64,9 @@ r_drawviewmodel | Show or hide the FPS weapon
 r_drawclipbrushes | Cheat. Draws the clip and player clip brushes. 0: Don't draw (default), 1: Draw borders, 2: Draw fully
 volume | The in-game volume ranging from 0 to 1 (decimal)
 hud_combattext | Show damage / MISS! when shooting someone (default: 1)
+hud_combattext_red | How much red is ther in the color of the text from hud_combattext (0 - 255)
+hud_combattext_green | How much green is ther in the color of the text from hud_combattext (0 - 255)
+hud_combattext_blue | How much blue is ther in the color of the text from hud_combattext (0 - 255)
 hud_combattext_healing | hud_combattext but with healing instead of shooting (default: 1)
 hud_combattext_batching | Combines damage into a single floating text instead of multiple (default: 0)
 hud_combattext_batching_window | Time (in decimal seconds) before creating another floating text if hud_combattext_batching is on (default: 0)
