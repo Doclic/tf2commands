@@ -21,6 +21,7 @@ bindtoggle "key" toggle | Same as toggle but binds it
 noclip | Cheat. Toggles noclip (noclip is the ability to fly and go through walls)
 god | Cheat. Toggles god mode (when in god mode, you shouldn't take damage but for some reason, this doesn't work in TF2)
 hurtme damage | Cheat. Damages you by the specified amount, negative amounts will give you health and can overheal you
+cvarlist | Gives you a list of all convars and commands in any source game, you can also find this list here: https://developer.valvesoftware.com/wiki/List_of_TF2_console_commands_and_variables
 eureka_teleport location | If the player is holding the Euraka Effect, then they will be teleported to 0: their spawn 1: their teleporter exit
 lastdisguise | Makes a spy re-disguise. If the spy is already disguised, then they will hold the weapon (default bind: B)
 load_itempreset loadout_id | Sets the player's loadout. ID: 0: A 1: B 2: C 3: D
@@ -58,11 +59,19 @@ Convars:
 Client-side:
 fov_desired | The FOV, won't change the FPS weapon (default: 75)
 viewmodel_fov | The FPS weapon FOV (default: 54)
+tf_use_min_viewmodels | Makes your weapon smaller in FPS (default: 0)
 r_drawviewmodel | Show or hide the FPS weapon
-r_drawclipbrushes | Cheat. Draws the clip and player clip brushes. 0: Don't draw (Default), 1: Draw borders, 2: Draw fully
+r_drawclipbrushes | Cheat. Draws the clip and player clip brushes. 0: Don't draw (default), 1: Draw borders, 2: Draw fully
 volume | The in-game volume ranging from 0 to 1 (decimal)
-cl_pitchup and cl_pitchdown | Pitch range, should be set to the same value (default: 89, cheat)
-r_drawmodelstatsoverlay | Show the name of the model under the crosshair (default: 0, cheat)
+hud_combattext | Show damage / MISS! when shooting someone (default: 1)
+hud_combattext_healing | hud_combattext but with healing instead of shooting (default: 1)
+hud_combattext_batching | Combines damage into a single floating text instead of multiple (default: 0)
+hud_combattext_batching_window | Time (in decimal seconds) before creating another floating text if hud_combattext_batching is on (default: 0)
+hud_combattext_doesnt_block_overhead_text | Allow text like "CRITICAL HIT!" to show when hitting someone (default: 1)
+hud_deathnotice_time | Time (in decimal seconds) before an action in the kill feed fades out (default: 6)
+hud_saytext_time | Time (in decimal seconds) before a chat message fades out (default: 12)
+cl_pitchup and cl_pitchdown | Cheat. Pitch range, should be set to the same value (default: 89)
+r_drawmodelstatsoverlay | Cheat. Show the name of the model under the crosshair (default: 0)
 
 Server-side:
 sv_cheats | Are cheats enabled? (Default: 0)
