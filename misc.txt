@@ -132,6 +132,7 @@ tf_flag_caps_per_round | Playing to in CTF (default: 3)
 tf_ctf_bonus_time <seconds> | Sets how long players get crits after a CTF capture
 tf_damage_multiplier_blue | The damage multiplier (decimal) for BLU (default: 1)
 tf_damage_multiplier_red | The damage multiplier (decimal) for RED (default: 1)
+tf_double_donk_window | The maximum time (in decimal seconds) after between the hit and explosion for double-donks (default: 0.5)
 mp_friendlyfire | When set to 1, players will be able to hit their teammates. This is very buggy though. (Example: backstabs don't work on teammates)
 mp_idledealmethod | How the server deals with afk players. 0: doesn't do anything, 1: sends to spec, then kicks, 2: kicks (default: 1)
 tf_medieval | Force medieval mode (default: 0, even on cp_degrootkeep)
