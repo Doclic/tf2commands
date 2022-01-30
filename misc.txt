@@ -57,24 +57,8 @@ restart | Restarts the dedicated server, also exists on clients but doesn't do a
 
 Convars:
 Client-side:
-fov_desired | The FOV, won't change the FPS weapon (default: 75)
-viewmodel_fov | The FPS weapon FOV (default: 54)
-tf_use_min_viewmodels | Makes your weapon smaller in FPS (default: 0)
-r_drawviewmodel | Show or hide the FPS weapon
-r_drawclipbrushes | Cheat. Draws the clip and player clip brushes. 0: Don't draw (default), 1: Draw borders, 2: Draw fully
 volume | The in-game volume ranging from 0 to 1 (decimal)
-hud_combattext | Show damage / MISS! when shooting someone (default: 1)
-hud_combattext_red | How much red is ther in the color of the text from hud_combattext (0 - 255, default: 255)
-hud_combattext_green | How much green is ther in the color of the text from hud_combattext (0 - 255, default: 0)
-hud_combattext_blue | How much blue is ther in the color of the text from hud_combattext (0 - 255, default: 0)
-hud_combattext_healing | hud_combattext but with healing instead of shooting (default: 1)
-hud_combattext_batching | Combines damage into a single floating text instead of multiple (default: 0)
-hud_combattext_batching_window | Time (in decimal seconds) before creating another floating text if hud_combattext_batching is on (default: 0)
-hud_combattext_doesnt_block_overhead_text | Allow text like "CRITICAL HIT!" to show when hitting someone (default: 1)
-hud_deathnotice_time | Time (in decimal seconds) before an action in the kill feed fades out (default: 6)
-hud_saytext_time | Time (in decimal seconds) before a chat message fades out (default: 12)
 cl_pitchup and cl_pitchdown | Cheat. Pitch range, should be set to the same value (default: 89)
-r_drawmodelstatsoverlay | Cheat. Show the name of the model under the crosshair (default: 0)
 
 Server-side:
 sv_cheats | Are cheats enabled? (Default: 0)
