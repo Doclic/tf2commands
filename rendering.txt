@@ -1,0 +1,27 @@
+These Convars modify what is rendered on the screen and how
+This means that they're only client-side
+
+fov_desired | The Field Of View, won't change the viewmodel as it uses a second camera (Default: 75)
+r_drawviewmodel | Show or hide the viewmodel (Default: 1)
+viewmodel_fov | The FPS weapon FOV (Default: 54)
+tf_use_min_viewmodels | Makes your viewmodel smaller (Default: 0)
+r_drawclipbrushes | Cheat. Draws the clip and player clip brushes. 0: Don't draw (Default), 1: Draw borders, 2: Draw fully
+r_drawmodelstatsoverlay | Cheat. Show the name of the model under the crosshair (Default: 0)
+cl_drawhud | Cheat. Should the game render the viewmodel? (Default: 1)
+hud_combattext | Show damage / MISS! when shooting someone (Default: 1)
+hud_combattext_red | How much red is ther in the color of the text from hud_combattext (0 - 255, Default: 255)
+hud_combattext_green | How much green is ther in the color of the text from hud_combattext (0 - 255, Default: 0)
+hud_combattext_blue | How much blue is ther in the color of the text from hud_combattext (0 - 255, Default: 0)
+hud_combattext_healing | hud_combattext but with healing instead of shooting (Default: 1)
+hud_combattext_batching | Combines damage into a single floating text instead of multiple (Default: 0)
+hud_combattext_batching_window | Time (in decimal seconds) before creating another floating text if hud_combattext_batching is on (Default: 0)
+hud_combattext_doesnt_block_overhead_text | Allow text like "CRITICAL HIT!" to show when hitting someone (Default: 1)
+hud_deathnotice_time | Time (in decimal seconds) before an action in the kill feed fades out (Default: 6)
+hud_saytext_time | Time (in decimal seconds) before a chat message fades out (Default: 12)
+r_drawparticles | Cheat. Should the game render particles? (Default: 1)
+r_drawopaqueworld | Cheat. Should the game render opaque world brushes? (Default: 1)
+r_drawtranslucentworld | Cheat. Should the game render translucent world brushes? (Default: 1)
+r_drawworld | Cheat. Should the game render world brushes? (Default: 1)
+r_drawskybox | Cheat. Should the game render the skybox? (Default: 1)
+r_drawentities | Cheat. Should the game render entities? (Default: 1)
+r_drawmodelstatsoverlay | Cheat. Should the game give info about models renderer on the screen (Default: 0)
